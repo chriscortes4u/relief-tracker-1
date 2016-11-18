@@ -23,8 +23,13 @@ componentDidMount(){
       <div>
         <h3>{this.state.person.firstName + ' '
         + this.state.person.lastName}</h3>
+        <p>{this.state.person.email}</p>
+        <p>{this.state.person.phone}</p>
+        <button><Link to={`/persons/${this.state.person.id}/edit`}>Edit Person</Link>
+        </button>
+        <button>
         <Link to="/persons">Return</Link>
-
+        </button>
       </div>
     )
   }
