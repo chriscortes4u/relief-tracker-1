@@ -26,6 +26,7 @@ componentDidMount(){
     return(
       <div>
       <h1>Persons</h1>
+      <Link to="/persons/new">New Person</Link>
       <ul>
         {this.state.persons.map(listPerson)}
       </ul>
