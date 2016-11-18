@@ -18,7 +18,11 @@ componentDidMount(){
 
   render(){
     const listPerson = person =>
-     <li>{person.firstName + ' ' + person.lastName}</li>
+    // or "/persons/" + person.id + "/show"
+     <li key={person.id}>
+     <Link to={`/persons/${person.id}/show`}>
+     {person.firstName + ' ' + person.lastName}
+     </Link></li>
     return(
       <div>
       <h1>Persons</h1>
