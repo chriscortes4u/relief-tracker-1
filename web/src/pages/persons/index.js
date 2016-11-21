@@ -32,11 +32,11 @@ componentDidMount(){
     return(
       <div>
       <h1>Persons</h1>
-      <Link to="/persons/new">New Person</Link>
+    <button><Link to="/persons/new">New Person</Link></button>
       <ul>
         {this.state.persons.map(listPerson)}
       </ul>
-      <Link to="/">Home</Link>
+      <button><Link to="/">Home</Link></button>
     </div>
     )
   }

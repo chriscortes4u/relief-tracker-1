@@ -12,7 +12,7 @@
       "firstName": "Elvis",
       "lastName": "Presely",
       "email": "EV@music.com",
-      "phone": "321-556-7869",
+      "phone": "321-556-7769",
       "success": false,
       "id": "2"
     },
@@ -33,6 +33,69 @@
       "id": "4"
     }
   ],
-  "efforts": [],
-  "locations": []
+  "efforts": [
+    {
+          "id": "1",
+          "name": "Peru Relief Effort",
+          "description": "Water Relief",
+          "location_id": 1,
+          "persons": [
+            1
+          ]
+        },
+        {
+          "name": "Relief Effort",
+          "description": "Description",
+          "id": "RF1"
+        },
+        {
+              "id": "2",
+              "name": "Brazil Relief Effort",
+              "description": "Water Relief",
+              "location_id": 2,
+              "persons": [
+                2
+              ]
+            },
+            {
+              "name": "New Effort",
+              "description": "Description",
+              "id": "RF2"
+            },
+            {
+                  "id": "3",
+                  "name": "Haiti Relief Effort",
+                  "description": "Food Supply Relief",
+                  "location_id": 3,
+                  "persons": [
+                    3
+                  ]
+                },
+                {
+                  "name": "New Effort",
+                  "description": "Description",
+                  "id": "RF3"
+                }
+  ],
+  "locations": [
+    {
+      "id": "1",
+      "name": "Lima ,Peru",
+      "lat": 12.0464,
+      "long": 77.0428
+    },
+    {
+      "id": "2",
+      "name": "Sao Paulo, Brazil",
+      "lat": 23.5505,
+      "long": 46.6333
+    },
+
+    {
+      "id": "3",
+      "name": "Jacmel, Haiti",
+      "lat": 18.2430,
+      "long": 72.5264
+    }
+  ]
 }

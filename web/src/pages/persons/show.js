@@ -47,7 +47,7 @@ handleRemove(e){
         <button>
         <a href="#" onClick ={this.handleRemove}>Remove Person</a>
         </button>
-        <button>
+        <button >
         <Link to="/persons">Return</Link>
         </button>
       </div>
