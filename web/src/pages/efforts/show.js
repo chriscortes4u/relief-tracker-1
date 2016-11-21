@@ -18,9 +18,12 @@ const Effort = React.createClass({
       <div>
         <h3>{this.state.effort.name}</h3>
         <p>{this.state.effort.description}</p>
-        <Link to="/efforts">Efforts</Link>
-        <Link to={`/efforts/${this.state.effort.id}/edit`}>Edit Effort</Link>
+        <p>{this.state.effort.phase}</p>
+        <p>{this.state.effort.start}</p>
+        <p>{this.state.effort.end}</p>
+      <button><Link to={`/efforts/${this.state.effort.id}/edit`}>Edit Effort</Link></button>
         <button>Remove</button>
+        <button><Link to="/efforts">Return</Link></button>
       </div>
     )
   }

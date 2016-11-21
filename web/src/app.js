@@ -15,6 +15,7 @@ const NoMatch = () => (
 const Effort = require('./pages/efforts/show')
 const EffortForm = require('./pages/efforts/form')
 const Efforts = require('./pages/efforts/index')
+//const ServiceEfforts = require('./components/service')
 
 
 const App = React.createClass({

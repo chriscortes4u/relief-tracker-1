@@ -3,7 +3,7 @@ const labelStyle = {display: 'block'}
 const {Link, Redirect} = require('react-router')
 const xhr = require('xhr')
 
-const PersonForm  = React.createClass({
+const PersonForm = React.createClass({
   getInitialState: function(){
     return {
       firstName: '',

@@ -62,7 +62,7 @@ render() {
           <button>Submit</button>
         </div>
       </form>
-      <Link to="/efforts">Efforts</Link>
+      <button><Link to="/efforts">Return</Link></button>
     </div>
 
   )

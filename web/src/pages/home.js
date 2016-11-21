@@ -4,8 +4,8 @@ const Home = React.createClass({
     render() {
         return (
             <div>
-                <h1>Welcome Home</h1>
-                <h3>Menu</h3>
+                <h1>Relief Tracker Home Page</h1>
+                <h3 class="f3 fw4 i lh-title mt0">Menu</h3>
                 <ul>
                     <li>
                         <button>

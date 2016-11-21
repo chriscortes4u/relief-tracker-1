@@ -33,10 +33,10 @@ componentDidMount(){
       <div>
       <h1>Persons</h1>
     <button><Link to="/persons/new">New Person</Link></button>
+    <button><Link to="/">Home</Link></button>
       <ul>
         {this.state.persons.map(listPerson)}
       </ul>
-      <button><Link to="/">Home</Link></button>
     </div>
     )
   }

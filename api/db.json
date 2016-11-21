@@ -31,51 +31,53 @@
       "phone": "867-563-6770",
       "success": false,
       "id": "4"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "success": false,
+      "id": "BkJVVYgMx"
     }
   ],
   "efforts": [
     {
-          "id": "1",
-          "name": "Peru Relief Effort",
-          "description": "Water Relief",
-          "location_id": 1,
-          "persons": [
-            1
-          ]
-        },
-        {
-          "name": "Relief Effort",
-          "description": "Description",
-          "id": "RF1"
-        },
-        {
-              "id": "2",
-              "name": "Brazil Relief Effort",
-              "description": "Water Relief",
-              "location_id": 2,
-              "persons": [
-                2
-              ]
-            },
-            {
-              "name": "New Effort",
-              "description": "Description",
-              "id": "RF2"
-            },
-            {
-                  "id": "3",
-                  "name": "Haiti Relief Effort",
-                  "description": "Food Supply Relief",
-                  "location_id": 3,
-                  "persons": [
-                    3
-                  ]
-                },
-                {
-                  "name": "New Effort",
-                  "description": "Description",
-                  "id": "RF3"
-                }
+      "id": "1",
+      "name": "Peru Relief Effort",
+      "description": "Water Relief",
+      "phase": "complete",
+      "start": "Jan 23rd 2014",
+      "end": "Dec 23rd 2014",
+      "location_id": 1,
+      "persons": [
+        1
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Brazil Relief Effort",
+      "description": "Water Relief",
+      "phase": "in-process",
+      "start": "Aug 1st 2016",
+      "end": "Dec 31st 2016",
+      "location_id": 2,
+      "persons": [
+        2
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Haiti Relief Effort",
+      "description": "Food Supply Relief",
+      "phase": "planning",
+      "start": "Jan 1st 2017",
+      "end": "June 1st 2017",
+      "location_id": 3,
+      "persons": [
+        3
+      ]
+    }
   ],
   "locations": [
     {
@@ -90,11 +92,10 @@
       "lat": 23.5505,
       "long": 46.6333
     },
-
     {
       "id": "3",
       "name": "Jacmel, Haiti",
-      "lat": 18.2430,
+      "lat": 18.243,
       "long": 72.5264
     }
   ]
