@@ -30,7 +30,7 @@ componentDidMount(){
      {person.firstName + ' ' + person.lastName}
      </Link></li>
     return(
-      <div>
+      <div className= "container">
       <h1>Persons</h1>
     <button><Link to="/persons/new">New Person</Link></button>
     <button><Link to="/">Home</Link></button>

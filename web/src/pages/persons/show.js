@@ -36,7 +36,7 @@ handleRemove(e){
 },
   render () {
     return (
-      <div>
+      <div className= "container">
       {this.state.removed ? <Redirect to="/persons" /> : null}
         <h3>{this.state.person.firstName + ' '
         + this.state.person.lastName}</h3>

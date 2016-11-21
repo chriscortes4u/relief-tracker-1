@@ -3,9 +3,10 @@ const {Link} = require('react-router')
 const Home = React.createClass({
     render() {
         return (
-            <div>
+
+            <div className="container">
                 <h1>Relief Tracker Home Page</h1>
-                <h3 class="f3 fw4 i lh-title mt0">Menu</h3>
+                <h3>Menu</h3>
                 <ul>
                     <li>
                         <button>

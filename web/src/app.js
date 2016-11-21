@@ -16,7 +16,9 @@ const Effort = require('./pages/efforts/show')
 const EffortForm = require('./pages/efforts/form')
 const Efforts = require('./pages/efforts/index')
 //const ServiceEfforts = require('./components/service')
-
+const Locations = require('./pages/locations/index')
+const Location = require('./pages/locations/show')
+const LocationForm = require('./pages/locations/form')
 
 const App = React.createClass({
   render(){
@@ -35,6 +37,10 @@ const App = React.createClass({
       <Match pattern="/efforts/new" component={Service(EffortForm, 'efforts')} />
       <Match pattern="/efforts/:id/edit" component={Service(EffortForm, 'efforts')} />
 
+      <Match exactly pattern="/locations" component={Service(Locations,'locations')} />
+      <Match pattern="/locations/:id/show" component={Service(Locations, 'locations')} />
+      <Match pattern="/locations/new" component={Service(LocationForm, 'locations')} />
+      <Match pattern="/locations/:id/edit" component={Service(LocationForm, 'locations')} />
 
       <Miss component= {NoMatch} />
       </div>

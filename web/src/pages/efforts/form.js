@@ -38,7 +38,7 @@ render() {
   const effort = this.state.effort || {}
 
   return (
-    <div>
+    <div  className= "container">
       { this.state.success ? <Redirect to="/efforts" /> :null }
       <h3>Effort Form</h3>
       <form onSubmit={this.handleSubmit}>

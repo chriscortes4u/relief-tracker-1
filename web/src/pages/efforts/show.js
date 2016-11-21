@@ -15,7 +15,7 @@ const Effort = React.createClass({
   },
   render() {
     return (
-      <div>
+      <div className= "container">
         <h3>{this.state.effort.name}</h3>
         <p>{this.state.effort.description}</p>
         <p>{this.state.effort.phase}</p>

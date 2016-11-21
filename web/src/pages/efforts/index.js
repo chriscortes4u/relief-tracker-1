@@ -22,7 +22,7 @@ const Efforts = React.createClass({
       </Link>
     </li>
     return(
-      <div>
+      <div className= "container">
         <header>
           <nav>
           <button>
