@@ -87,7 +87,7 @@
       "start": "Jan. 1st 2017",
       "end": "Feb. 1st 2017",
       "location_id": "4",
-      "id": "rJWuHXbGg"
+      "id": "4"
     }
   ],
   "locations": [
@@ -102,12 +102,21 @@
       "name": "Sao Paulo, Brazil",
       "lat": 23.5505,
       "long": 46.6333
+
     },
     {
       "id": "3",
       "name": "Jacmel, Haiti",
       "lat": 18.243,
       "long": 72.5264
+    },
+    {
+      "success": false,
+      "location": {},
+      "name": "Coxen Hole, Honduras",
+      "lat": "16.3240",
+      "long": "86.5350",
+      "id": "5"
     }
   ]
 }

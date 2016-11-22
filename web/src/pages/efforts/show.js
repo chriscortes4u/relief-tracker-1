@@ -1,6 +1,10 @@
 const React = require('react')
 const {Link} = require('react-router')
 const xhr = require('xhr')
+const Service = require('../../components/service')
+const LocationShowBase = require('./location-show')
+const LocationShow = Service(LocationShowBase, 'locations')
+
 
 const Effort = React.createClass({
   getInitialState: function() {
@@ -35,6 +39,7 @@ const Effort = React.createClass({
         <p>{this.state.effort.phase}</p>
         <p>{this.state.effort.start}</p>
         <p>{this.state.effort.end}</p>
+        {this.state.location_id ? <LocationShow id={this.state.location_id} /> : null }
       <button><Link to={`/efforts/${this.state.effort.id}/edit`}>Edit Effort</Link></button>
         <button onClick={this.handleRemove}>Remove</button>
         <button><Link to="/efforts">Return</Link></button>

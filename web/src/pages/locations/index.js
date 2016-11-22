@@ -26,6 +26,7 @@ const Locations = React.createClass({
         <div className="container">
           <header>
             <nav>
+              <h3>Locations</h3>
               <button>
                 <Link to="/locations/new">Add New</Link>
               </button>
@@ -33,7 +34,6 @@ const Locations = React.createClass({
                 <Link to="/">Menu</Link>
               </button>
             </nav>
-            <h3>Locations</h3>
           </header>
           <main>
             <ul>

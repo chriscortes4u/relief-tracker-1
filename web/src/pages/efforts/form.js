@@ -1,12 +1,19 @@
 const React = require('react')
 const {Link, Redirect} = require('react-router')
 const xhr = require('xhr')
+const Service = require('../../components/service');
+const ModelSelect = require('../../components/model-select')
+
+const locationSelect = Service(ModelSelect, 'locations')
+
+const TextField = require('../../components/text-field')
 
 const EffortForm = React.createClass({
     getInitialState: function() {
         return {
           efforts: {},
-          success: false
+          success: false,
+          locations:[ {id: '-1', name: 'Choose'}]
         }
     },
     componentDidMount() {
@@ -16,6 +23,15 @@ const EffortForm = React.createClass({
         //     })
         //   }
         // },
+
+      xhr.get(process.env.REACT_APP_API + '/locations',
+      {json: true},
+       (err, res, body) =>{
+        if (err) return console.log(err.message)
+        console.log(body)
+        this.setState({locations: [].concat(this.state.locations, body)
+        })
+      })
         if (this.props.params.id) {
             xhr.get('http://localhost:4000/efforts/' + this.props.params.id, {
                 json: true
@@ -35,6 +51,7 @@ const EffortForm = React.createClass({
     },
     handleSubmit(e) {
         e.preventDefault()
+
         if (this.state.id) {
             xhr.put('http://localhost:4000/efforts/' + this.state.id, {
                 json: this.state
@@ -63,6 +80,7 @@ const EffortForm = React.createClass({
         const labelStyle = {
             display: 'block'
         }
+        const option = location => <option value={location.id}>{location.name}</option>
         const effort = this.state.effort || {}
         const formState = this.state.id
             ? 'Edit'
@@ -81,15 +99,29 @@ const EffortForm = React.createClass({
                     Effort Form</h3>
                 <form onSubmit={this.handleSubmit}>
 
-                    <div>
-                        <label style={labelStyle}>Name</label>
-                        <input type="text" value={this.state.name} onChange={this.handleChange('name')}/>
-                    </div>
-                    <div>
-                        <label style={labelStyle}>Description</label>
-                        <input type="text" value={this.state.description} onChange={this.handleChange('description')}/>
-                    </div>
-                    <div>
+                <TextField label="Name"
+                  value={this.state.name}
+                  onChange={this.handleChange('name')} />
+
+                  <TextField label="Description"
+                    value={this.state.description}
+                    onChange={this.handleChange('description')} />
+
+                    {/* <locationSelect
+                        label="Locations"
+                        value={this.state.location_id}
+                        onChange={this.handleChange('location_id')}
+                    /> */}
+                    <select
+                    value={this.state.location_id}
+                    onChange={this.handleChange('location_id')}>
+                    {this.state.locations.map((location, i) => {
+                      return <option key={i}
+                      value={location.id}>{location.name}</option>
+                    })}
+                    </select>
+
+                    {/* <div>
                         <label style={labelStyle}>Phase</label>
                         <input type="text" value={this.state.phase} onChange={this.handleChange('phase')}/>
                     </div>
@@ -105,7 +137,7 @@ const EffortForm = React.createClass({
                         <label style={labelStyle}>Location ID</label>
                         <input type="text" value={this.state.location_id} onChange={this.handleChange('location_id')}/>
                       </div>
-                        <div>
+                        */}<div>
                             <button>Save</button>
                         </div>
                     </form>

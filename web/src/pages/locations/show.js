@@ -13,6 +13,7 @@ const Location = React.createClass({
       this.setState({location})
     })
   },
+
   render(){
     return(
       <div className= "container">

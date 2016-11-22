@@ -3,6 +3,7 @@ const labelStyle = {display: 'block'}
 const {Link, Redirect} = require('react-router')
 const xhr = require('xhr')
 
+
 const LocationForm = React.createClass({
   getInitialState: function(){
     return{
@@ -10,6 +11,15 @@ const LocationForm = React.createClass({
       location: {}
     }
   },
+  componentDidMount(){
+    if (this.props.params.id) {
+      xhr.get('http://localhost:4000/locations' +
+      this.props.params.id, {json: true}, (err, response, person) => {
+      if  (err) return console.log(err.message)
+      this.setState(location)
+    })
+  }
+},
 
   handleChange(field){
     return e => {
@@ -36,25 +46,17 @@ const LocationForm = React.createClass({
       })
     }
   },
-  componentDidMount(){
-    if (this.props.params.id) {
-      xhr.get('http://localhost:4000/locations' +
-      this.props.params.id, {json: true}, (err, response, person) => {
-      if  (err) return console.log(err.message)
-      this.setState(location)
-    })
-  }
-},
   render(){
     const labelStyle = {display: 'block'}
     const formLocation = this.state.id ? 'Edit' : 'New'
+
     return (
       <div className= "container">
         {this.state.success ? <Redirect to="/locations" /> :null }
         <h3>Location Form</h3>
         <form onSubmit= {this.handleSubmit}>
             <div>
-              <label sytle={labelStyle}>Name</label>
+              <label style={labelStyle}>Name</label>
               <input type="text"
                 value={this.state.location.name}
                 onChange={this.handleChange('name')} />
@@ -75,7 +77,7 @@ const LocationForm = React.createClass({
               <button>Submit</button>
             </div>
         </form>
-  <button><Link to="/locations">Return</Link></button> 
+  <button><Link to="/locations">Return</Link></button>
       </div>
     )
   }

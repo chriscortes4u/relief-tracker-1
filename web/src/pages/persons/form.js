@@ -6,10 +6,7 @@ const xhr = require('xhr')
 const PersonForm = React.createClass({
   getInitialState: function(){
     return {
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
+      persons: {},
       success: false
     }
   },
