@@ -38,7 +38,7 @@ const App = React.createClass({
       <Match pattern="/efforts/:id/edit" component={Service(EffortForm, 'efforts')} />
 
       <Match exactly pattern="/locations" component={Service(Locations,'locations')} />
-      <Match pattern="/locations/:id/show" component={Service(Locations, 'locations')} />
+      <Match pattern="/locations/:id/show" component={Service(Location, 'locations')} />
       <Match pattern="/locations/new" component={Service(LocationForm, 'locations')} />
       <Match pattern="/locations/:id/edit" component={Service(LocationForm, 'locations')} />
 

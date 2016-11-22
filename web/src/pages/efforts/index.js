@@ -25,6 +25,7 @@ const Efforts = React.createClass({
       <div className= "container">
         <header>
           <nav>
+            <h3>Efforts</h3>
           <button>
             <Link to="/efforts/new">Add New</Link>
             </button>
@@ -32,7 +33,7 @@ const Efforts = React.createClass({
             <Link to="/">Menu</Link>
             </button>
           </nav>
-          <h3>Efforts</h3>
+
         </header>
         <main>
           <ul>

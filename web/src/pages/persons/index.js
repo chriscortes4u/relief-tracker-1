@@ -12,8 +12,6 @@ componentDidMount(){
     if (err) return console.log(err.message)
     this.setState({persons})
   })
-
-
   // xhr.get('http://localhost:4000/persons', {
   //   json: true
   // }, (err, response, persons) => {
